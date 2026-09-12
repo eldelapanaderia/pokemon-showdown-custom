@@ -16,9 +16,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "UUBL",
 	},
 	venusaurgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	charmander: {
 		tier: "LC",
@@ -42,9 +43,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "OU",
 	},
 	charizardgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	squirtle: {
 		tier: "LC",
@@ -63,9 +65,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "Uber",
 	},
 	blastoisegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	caterpie: {
 		tier: "LC",
@@ -79,9 +82,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	butterfreegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	weedle: {
 		isNonstandard: "Past",
@@ -244,9 +248,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	pikachugmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	pikachuworld: {
 		tier: "ZU",
@@ -259,7 +264,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	raichualola: {
-		tier: "PU",
+		tier: "PUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -417,9 +422,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	meowthgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	persian: {
 		tier: "ZU",
@@ -514,9 +520,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	machampgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	bellsprout: {
 		isNonstandard: "Past",
@@ -709,12 +716,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	gengarmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "AG",
+		natDexTier: "Uber",
 	},
 	gengargmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	onix: {
 		tier: "LC",
@@ -748,9 +756,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	kinglergmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	voltorb: {
 		isNonstandard: "Past",
@@ -1007,9 +1016,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	laprasgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	ditto: {
 		tier: "ZU",
@@ -1024,9 +1034,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	eeveegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	vaporeon: {
 		tier: "NU",
@@ -1116,9 +1127,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	snorlaxgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	articuno: {
 		tier: "ZU",
@@ -2396,7 +2408,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	rayquazamega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "AG",
+		natDexTier: "Uber",
 	},
 	jirachi: {
 		tier: "UU",
@@ -3288,9 +3300,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	garbodorgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	zorua: {
 		tier: "LC",
@@ -3583,7 +3596,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	hydreigon: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UUBL",
+		natDexTier: "UU",
 	},
 	larvesta: {
 		tier: "LC",
@@ -3604,7 +3617,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RUBL",
 	},
 	virizion: {
-		tier: "PU",
+		tier: "PUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4612,7 +4625,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "OU",
 	},
 	guzzlord: {
-		tier: "PU",
+		tier: "PUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4634,7 +4647,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	necrozmaultra: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "AG",
+		natDexTier: "Uber",
 	},
 	magearna: {
 		tier: "Uber",
@@ -4682,9 +4695,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "UUBL",
 	},
 	melmetalgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	grookey: {
 		tier: "LC",
@@ -4700,9 +4714,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "OU",
 	},
 	rillaboomgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	scorbunny: {
 		tier: "LC",
@@ -4716,9 +4731,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "Uber",
 	},
 	cinderacegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	sobble: {
 		tier: "LC",
@@ -4732,9 +4748,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	inteleongmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	skwovet: {
 		tier: "LC",
@@ -4756,9 +4773,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "OU",
 	},
 	corviknightgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	blipbug: {
 		tier: "LC",
@@ -4772,9 +4790,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	orbeetlegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	nickit: {
 		tier: "LC",
@@ -4809,9 +4828,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	drednawgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	yamper: {
 		tier: "LC",
@@ -4833,9 +4853,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	coalossalgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	applin: {
 		tier: "LC",
@@ -4846,9 +4867,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	flapplegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	appletun: {
 		tier: "ZU",
@@ -4856,9 +4878,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	appletungmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	silicobra: {
 		tier: "LC",
@@ -4869,9 +4892,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	sandacondagmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	cramorant: {
 		tier: "ZU",
@@ -4910,14 +4934,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	toxtricitygmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	toxtricitylowkeygmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	sizzlipede: {
 		tier: "LC",
@@ -4928,9 +4954,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	centiskorchgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	clobbopus: {
 		tier: "LC",
@@ -4963,9 +4990,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "UU",
 	},
 	hatterenegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	impidimp: {
 		tier: "LC",
@@ -4979,9 +5007,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	grimmsnarlgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	milcery: {
 		tier: "LC",
@@ -4992,9 +5021,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	alcremiegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	falinks: {
 		tier: "ZU",
@@ -5053,9 +5083,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	copperajahgmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	dracozolt: {
 		tier: "UUBL",
@@ -5083,9 +5114,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RU",
 	},
 	duraludongmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	dreepy: {
 		tier: "LC",
@@ -5101,12 +5133,12 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	zacian: {
 		tier: "AG",
 		doublesTier: "DUber",
-		natDexTier: "AG",
+		natDexTier: "Uber",
 	},
 	zaciancrowned: {
 		tier: "AG",
 		doublesTier: "DUber",
-		natDexTier: "AG",
+		natDexTier: "Uber",
 	},
 	zamazenta: {
 		tier: "Uber",
@@ -5141,14 +5173,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "UU",
 	},
 	urshifugmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	urshifurapidstrikegmax: {
+		isNonstandard: "Gigantamax",
 		tier: "AG",
 		doublesTier: "(DUber)",
-		natDexTier: "(AG)",
+		natDexTier: "(Uber)",
 	},
 	zarude: {
 		tier: "UU",
@@ -5190,7 +5224,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	calyrexshadow: {
 		tier: "Uber",
 		doublesTier: "DUber",
-		natDexTier: "AG",
+		natDexTier: "Uber",
 	},
 	wyrdeer: {
 		isNonstandard: "Future",

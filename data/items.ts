@@ -1241,8 +1241,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ghost",
 		},
 		onFractionalPriorityPriority: -2,
-		onFractionalPriority(priority, pokemon, target, move) {
-			if (move.category === 'Status' && pokemon.hasAbility('myceliummight')) return;
+		onFractionalPriority(priority, pokemon) {
 			if (
 				priority <= 0 &&
 				(pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
@@ -4985,7 +4984,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	quickclaw: {
 		onFractionalPriorityPriority: -2,
 		onFractionalPriority(priority, pokemon, target, move) {
-			if (move.category === 'Status' && pokemon.hasAbility('myceliummight')) return;
+			if (move.category === "Status" && pokemon.hasAbility("myceliummight")) return;
 			if (priority <= 0 && this.randomChance(1, 5)) {
 				this.add('-activate', pokemon, 'item: Quick Claw');
 				return 0.1;
@@ -7859,7 +7858,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onResidualOrder: 10,
 		onResidual(pokemon) {
-			if (pokemon.hp < pokemon.maxhp / 2) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
 				pokemon.eatItem();
 			}
 		},
@@ -7871,7 +7870,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 155,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	berserkgene: {
@@ -7887,7 +7885,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 0,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	bitterberry: {
@@ -7908,7 +7905,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 156,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	burntberry: {
@@ -7931,7 +7927,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 153,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	goldberry: {
@@ -7944,7 +7939,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onResidualOrder: 10,
 		onResidual(pokemon) {
-			if (pokemon.hp < pokemon.maxhp / 2) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
 				pokemon.eatItem();
 			}
 		},
@@ -7956,7 +7951,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 158,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	iceberry: {
@@ -7979,7 +7973,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 152,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	mintberry: {
@@ -8002,7 +7995,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 150,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	miracleberry: {
@@ -8024,7 +8016,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 157,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	mysteryberry: {
@@ -8064,7 +8055,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 154,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	pinkbow: {
@@ -8077,7 +8067,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 251,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	polkadotbow: {
@@ -8090,7 +8079,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 251,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	przcureberry: {
@@ -8113,7 +8101,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 149,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	psncureberry: {
@@ -8136,7 +8123,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 151,
 		gen: 2,
-		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 

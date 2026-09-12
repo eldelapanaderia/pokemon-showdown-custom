@@ -539,7 +539,7 @@
     "kangaskhan": {
         "level": 73,
         "moves": ["bodyslam", "earthquake", "hyperbeam"],
-        "exclusiveMoves": ["blizzard", "counter", "rockslide", "rockslide"]
+        "exclusiveMoves": ["blizzard", "counter", "rockslide", "rockslide", "surf"]
     },
     "horsea": {
         "level": 88,
@@ -570,7 +570,7 @@
         "level": 68,
         "moves": ["blizzard", "psychic", "thunderbolt"],
         "essentialMoves": ["recover", "thunderwave"],
-        "exclusiveMoves": ["psychic", "surf", "surf"]
+        "exclusiveMoves": ["hydropump", "psychic", "surf", "surf"]
     },
     "mrmime": {
         "level": 75,
@@ -604,7 +604,8 @@
     },
     "tauros": {
         "level": 68,
-        "moves": ["blizzard", "bodyslam", "earthquake", "hyperbeam"]
+        "moves": ["bodyslam", "earthquake", "hyperbeam"],
+        "exclusiveMoves": ["blizzard", "blizzard", "blizzard", "thunderbolt"]
     },
     "gyarados": {
         "level": 74,
@@ -653,8 +654,8 @@
     },
     "omastar": {
         "level": 74,
-        "moves": ["rest", "rest", "seismictoss"],
-        "essentialMoves": ["blizzard", "bodyslam"],
+        "moves": ["bodyslam", "rest", "seismictoss"],
+        "essentialMoves": ["blizzard"],
         "exclusiveMoves": ["hydropump", "surf"]
     },
     "kabuto": {

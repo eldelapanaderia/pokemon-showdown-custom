@@ -181,7 +181,7 @@ export class RandomGen3Teams extends RandomGen4Teams {
 			preferredType, role);
 
 		// If there are only four moves, add all moves and return early
-		if (movePool.length <= this.maxMoveCount || species.id === 'unown') {
+		if (movePool.length <= this.maxMoveCount) {
 			// Still need to ensure that multiple Hidden Powers are not added (if maxMoveCount is increased)
 			while (movePool.length) {
 				const moveid = this.sample(movePool);
@@ -631,14 +631,12 @@ export class RandomGen3Teams extends RandomGen4Teams {
 		species: Species,
 		pokemon: RandomTeamsTypes.RandomSet[],
 	): boolean {
-		const reversalUsers = ['raticate', 'primeape', 'hitmonlee', 'furret', 'yanma', 'heracross', 'blaziken', 'medicham'];
-		const flailUsers = ['dodrio', 'farfetchd'];
 		const incompatibilityList = [
 			// These Pokemon are incompatible because the presence of one actively harms the other.
 			// Prevent Shedinja + Tyranitar
 			['shedinja', 'tyranitar'],
 			// Prevent Reversal/Flail users + Tyranitar
-			[[...flailUsers, ...reversalUsers], 'tyranitar'],
+			[['dodrio', 'raticate', 'primeape', 'hitmonlee', 'furret', 'yanma', 'heracross', 'blaziken', 'medicham'], 'tyranitar'],
 		];
 
 		for (const pair of incompatibilityList) {

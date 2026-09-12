@@ -68,7 +68,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 			Fighting: (movePool, moves, abilities, types, counter) => !counter.get('Fighting'),
 			Fire: (movePool, moves, abilities, types, counter) => !counter.get('Fire'),
 			Flying: (movePool, moves, abilities, types, counter, species) => (
-				!counter.get('Flying') && !['aerodactyl', 'mandibuzz', 'mantine', 'murkrow'].includes(species.id) &&
+				!counter.get('Flying') && !['aerodactyl', 'mantine', 'murkrow'].includes(species.id) &&
 				!movePool.includes('hiddenpowerflying')
 			),
 			Ghost: (movePool, moves, abilities, types, counter) => !counter.get('Ghost'),
@@ -498,7 +498,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		species: Species,
 	): boolean {
 		switch (ability) {
-		case 'Chlorophyll': case 'Leaf Guard': case 'Solar Power':
+		case 'Chlorophyll': case 'Solar Power':
 			return !teamDetails.sun;
 		case 'Hydration': case 'Swift Swim':
 			return !teamDetails.rain;
@@ -544,7 +544,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		// If all abilities are rejected, prioritize weather abilities over non-weather abilities
 		if (!abilityAllowed.length) {
 			const weatherAbilities = abilities.filter(
-				a => ['Chlorophyll', 'Hydration', 'Leaf Guard', 'Sand Force', 'Sand Rush', 'Solar Power', 'Swift Swim'].includes(a)
+				a => ['Chlorophyll', 'Hydration', 'Sand Force', 'Sand Rush', 'Solar Power', 'Swift Swim'].includes(a)
 			);
 			if (weatherAbilities.length) return this.sample(weatherAbilities);
 		}
@@ -571,6 +571,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		if (species.id === 'pikachu') return 'Light Ball';
 		if (species.id === 'shedinja' || species.id === 'smeargle') return 'Focus Sash';
 		if (species.id === 'delibird' && moves.has('counter')) return 'Focus Sash';
+		if (species.id === 'unown') return 'Choice Specs';
 		if (species.id === 'wobbuffet') return 'Custap Berry';
 		if (ability === 'Harvest') return 'Sitrus Berry';
 		if (species.id === 'ditto') return 'Choice Scarf';
@@ -647,14 +648,8 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		if (species.id === 'palkia') return 'Lustrous Orb';
 		if (moves.has('outrage') && counter.get('setup')) return 'Lum Berry';
 		if (
-			(ability === 'Rough Skin') || (
-				species.id !== 'hooh' &&
-				ability === 'Regenerator' && species.baseStats.hp + species.baseStats.def >= 180 && this.randomChance(1, 2)
-			) || (
-				ability !== 'Regenerator' && !counter.get('setup') && counter.get('recovery') &&
-				this.dex.getEffectiveness('Fighting', species) < 1 &&
-				(species.baseStats.hp + species.baseStats.def) > 200 && this.randomChance(1, 2)
-			)
+			(ability === 'Rough Skin') || (species.id !== 'hooh' && role !== 'Wallbreaker' &&
+				ability === 'Regenerator' && species.baseStats.hp + species.baseStats.def >= 180 && this.randomChance(1, 2))
 		) return 'Rocky Helmet';
 		if (['protect', 'substitute'].some(m => moves.has(m))) return 'Leftovers';
 		if (
@@ -737,13 +732,11 @@ export class RandomGen5Teams extends RandomGen6Teams {
 			if (move.startsWith('hiddenpower')) hasHiddenPower = true;
 		}
 
-		if (hasHiddenPower || species.id === 'ditto') {
+		if (hasHiddenPower) {
 			let hpType;
 			for (const move of moves) {
 				if (move.startsWith('hiddenpower')) hpType = move.substr(11);
 			}
-			// Ditto gets IVs to copy Hidden Power Ice
-			if (species.id === 'ditto') hpType = 'ice';
 			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
 			const HPivs = this.dex.types.get(hpType).HPivs;
 			let iv: StatID;
@@ -926,9 +919,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 				if (!this.getPokemonCompatibility(species, pokemon)) continue;
 			}
 
-			const set = this.randomSet(species, teamDetails,
-				pokemon.length === 0 && !ruleTable.has('pickedteamsize') && !ruleTable.has('teampreview')
-			);
+			const set = this.randomSet(species, teamDetails, pokemon.length === 0);
 
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);

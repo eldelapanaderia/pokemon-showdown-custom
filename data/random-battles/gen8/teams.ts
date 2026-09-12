@@ -61,7 +61,6 @@ const MOVE_PAIRS = [
 	['lightscreen', 'reflect'],
 	['sleeptalk', 'rest'],
 	['protect', 'wish'],
-	['spikyshield', 'wish'],
 	['leechseed', 'substitute'],
 	['focuspunch', 'substitute'],
 ];
@@ -260,7 +259,7 @@ export class RandomGen8Teams extends RandomTeams {
 			this.incompatibleMoves(moves, movePool, statusInflictingMoves, statusInflictingMoves);
 		}
 
-		// This space reserved for assorted hardcodes that make little sense out of context and can't fit in the const:
+		// This space reserved for assorted hardcodes that otherwise make little sense out of context:
 		// To force Will-O-Wisp on Corsola-Galar
 		if (species.id === 'corsolagalar') this.incompatibleMoves(moves, movePool, 'haze', 'stealthrock');
 	}
@@ -659,10 +658,12 @@ export class RandomGen8Teams extends RandomTeams {
 				return 'Sitrus Berry';
 			}
 		}
-		if (moves.has('dragonenergy') || moves.has('waterspout')) return 'Choice Scarf';
-		if (
-			moves.has('boltbeak') || moves.has('fishiousrend')
-		) return (role === 'Fast Attacker') ? 'Choice Scarf' : 'Choice Band';
+		if (['boltbeak', 'dragonenergy', 'fishiousrend', 'waterspout'].some(m => moves.has(m))) {
+			if (counter.get('Flying')) {
+				return 'Choice Band';
+			}
+			return 'Choice Scarf';
+		}
 		if (moves.has('geomancy') || moves.has('meteorbeam')) return 'Power Herb';
 		if (moves.has('shellsmash')) return (ability === 'Sturdy') ? 'Heavy-Duty Boots' : 'White Herb';
 		if (ability === 'Guts' && moves.has('facade')) return types.has('Fire') ? 'Toxic Orb' : 'Flame Orb';
@@ -949,8 +950,6 @@ export class RandomGen8Teams extends RandomTeams {
 			[screenSetters, screenSetters],
 
 			// These Pokemon are incompatible because the presence of one actively harms the other.
-			// Screen Cleaner is a bad ability
-			['mrrime', screenSetters],
 			// Prevent Dry Skin + sun setting ability
 			[['jynx', 'toxicroak', 'heliolisk'], sunSetters],
 			// Prevent Shedinja + sand/hail setting ability
@@ -1081,9 +1080,7 @@ export class RandomGen8Teams extends RandomTeams {
 			// Limit three of any type combination in Monotype
 			if (!this.forceMonotype && isMonotype && (typeComboCount[typeCombo] >= 3 * limitFactor)) continue;
 
-			const set = this.randomSet(species, teamDetails,
-				pokemon.length === 0 && !ruleTable.has('pickedteamsize') && !ruleTable.has('teampreview')
-			);
+			const set = this.randomSet(species, teamDetails, pokemon.length === 0);
 			pokemon.push(set);
 
 			// Don't bother tracking details for the last Pokemon
