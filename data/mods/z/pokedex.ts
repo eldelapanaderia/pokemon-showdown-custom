@@ -4661,6 +4661,11 @@ export const Pokedex: { [speciesid: string]: ModdedSpeciesData } = {
 		types: ["Dark"],
 		baseStats: { hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105 },
 	},
+        zoroarkhisui: {
+		abilities: { 0: "Illusion" },
+		inherit: true,
+		baseStats: { hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105 },
+	},
 	minccino: {
 		abilities: { 0: "No Ability" },
 		inherit: true,
@@ -8289,6 +8294,7 @@ export const Pokedex: { [speciesid: string]: ModdedSpeciesData } = {
 		num: -108,
 		abilities: { 0: "No Ability" },
 		inherit: true,
+                name: "Sudrasil",
 		types: ["Rock", "Grass"],
 		baseStats: { hp: 90, atk: 130, def: 145, spa: 40, spd: 85, spe: 60 },
 		heightm: 1.2,
@@ -8310,7 +8316,8 @@ export const Pokedex: { [speciesid: string]: ModdedSpeciesData } = {
 	auretosk: {
 		num: -109,
 		abilities: { 0: "No Ability" },
-		inherit: true,
+		name: "Auretosk",
+                inherit: true,
 		types: ["Electric", "Ghost"],
 		baseStats: { hp: 126, atk: 131, def: 95, spa: 99, spd: 98, spe: 131 },
 	},

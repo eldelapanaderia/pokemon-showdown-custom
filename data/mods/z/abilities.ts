@@ -7677,13 +7677,13 @@ export const Abilities: import("../../../sim/dex-abilities").ModdedAbilityDataTa
 		},
 		illusoryform: {
 			onUpdate(pokemon) {
-				if (pokemon.hp > pokemon.maxhp * 0.75) {
+				if (pokemon.hp > pokemon.maxhp * 2/3) {
 					// Si tiene la vida alta y no está al máximo de evasión (+6), subimos
 					if (pokemon.boosts.evasion < 6) {
 						this.boost({ evasion: 2 }, pokemon, pokemon);
 					}
 				} else {
-					// Si la vida baja del 75%, reseteamos la evasión
+					// Si la vida baja del 66%, reseteamos la evasión
 					if (pokemon.boosts.evasion > 0) {
 						this.boost({ evasion: 0 }, pokemon, pokemon);
 						this.add(
