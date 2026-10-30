@@ -276,9 +276,9 @@ export const Formats: import("../sim/dex-formats").FormatList = [
 		},
 	},
 	{
-		name: "[Gen 8] Pokemon Luminiscent Platinum",
+		name: "[Gen 8] Pokemon Luminiscent Platinum (Bo3)",
 		mod: "luminiscentplatinum",
-		id: "gen8pokemonluminiscentplatinum" as ID,
+		id: "gen8pokemonluminiscentplatinumbo3" as ID,
 		ruleset: [
 			"Adjust Level = 50", //Ajustar Nivel
 			"Species Clause",
