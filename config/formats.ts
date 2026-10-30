@@ -309,4 +309,5 @@ export const Formats: import("../sim/dex-formats").FormatList = [
 			if (effect && effect.id === "terastal") return;
 			return species;
 		},
+	}
 ];
