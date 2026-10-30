@@ -128,7 +128,8 @@ export const Formats: import("../sim/dex-formats").FormatList = [
 			if (effect && effect.id === "terastal") return;
 			return species;
 		},
-		{
+	},
+	{
 		name: "[Gen 8] Pokemon Luminiscent Platinum",
 		mod: "luminiscentplatinum",
 		id: "gen8pokemonluminiscentplatinum" as ID,
