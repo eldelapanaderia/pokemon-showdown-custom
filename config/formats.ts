@@ -128,6 +128,39 @@ export const Formats: import("../sim/dex-formats").FormatList = [
 			if (effect && effect.id === "terastal") return;
 			return species;
 		},
+		{
+		name: "[Gen 8] Pokemon Luminiscent Platinum",
+		mod: "luminiscentplatinum",
+		id: "gen8pokemonluminiscentplatinum" as ID,
+		ruleset: [
+			"Adjust Level = 50", //Ajustar Nivel
+			"Species Clause",
+			"HP Percentage Mod",
+			// "Sleep Clause Mod",
+			"Sleep Clause Mod Custom",
+			"Cancel Mod",
+			"Team Preview",
+		],
+		onBegin() {
+			this.add(
+				"-message",
+				"Modo Pokémon Luminiscente Platino",
+			);
+		},
+		onValidateSet(set) {
+			// Esto permite que cualquier Pokémon y habilidad sea válido
+			return;
+		},
+		// Desactivar Terastal explícitamente
+		onValidateTeam(team) {
+			for (const set of team) {
+				if (set.teraType) set.teraType = undefined;
+			}
+		},
+		onModifySpecies(species, target, source, effect) {
+			if (effect && effect.id === "terastal") return;
+			return species;
+		},
 	},
 	{
 		section: "Custom Mods Bo3",
@@ -241,4 +274,38 @@ export const Formats: import("../sim/dex-formats").FormatList = [
 			return species;
 		},
 	},
+	{
+		name: "[Gen 8] Pokemon Luminiscent Platinum",
+		mod: "luminiscentplatinum",
+		id: "gen8pokemonluminiscentplatinum" as ID,
+		ruleset: [
+			"Adjust Level = 50", //Ajustar Nivel
+			"Species Clause",
+			"HP Percentage Mod",
+			// "Sleep Clause Mod",
+			"Sleep Clause Mod Custom",
+			"Cancel Mod",
+			"Team Preview",
+			"Best of = 3",
+		],
+		onBegin() {
+			this.add(
+				"-message",
+				"Modo Pokémon Luminiscente Platino",
+			);
+		},
+		onValidateSet(set) {
+			// Esto permite que cualquier Pokémon y habilidad sea válido
+			return;
+		},
+		// Desactivar Terastal explícitamente
+		onValidateTeam(team) {
+			for (const set of team) {
+				if (set.teraType) set.teraType = undefined;
+			}
+		},
+		onModifySpecies(species, target, source, effect) {
+			if (effect && effect.id === "terastal") return;
+			return species;
+		},
 ];
