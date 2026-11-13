@@ -8184,8 +8184,8 @@ export const Pokedex: { [speciesid: string]: ModdedSpeciesData } = {
 	},
 	halcombate: {
 		num: -100,
-		abilities: { 0: "No Ability" },
 		name: "Halcombate",
+		abilities: { 0: "No Ability" },
 		inherit: true,
 		types: ["Fighting", "Flying"],
 		baseStats: { hp: 93, atk: 120, def: 85, spa: 86, spd: 78, spe: 103 },
@@ -8292,9 +8292,9 @@ export const Pokedex: { [speciesid: string]: ModdedSpeciesData } = {
 	},
 	sudrasil: {
 		num: -108,
+		name: "Sudrasil",
 		abilities: { 0: "No Ability" },
 		inherit: true,
-                name: "Sudrasil",
 		types: ["Rock", "Grass"],
 		baseStats: { hp: 90, atk: 130, def: 145, spa: 40, spd: 85, spe: 60 },
 		heightm: 1.2,
@@ -8315,11 +8315,13 @@ export const Pokedex: { [speciesid: string]: ModdedSpeciesData } = {
 	},
 	auretosk: {
 		num: -109,
-		abilities: { 0: "No Ability" },
 		name: "Auretosk",
-                inherit: true,
+		abilities: { 0: "No Ability" },
+        inherit: true,
 		types: ["Electric", "Ghost"],
 		baseStats: { hp: 126, atk: 131, def: 95, spa: 99, spd: 98, spe: 131 },
+		heightm: 2.1,
+		weightkg: 100,
 	},
 	// TODO Ciertas megas no estan hechas como las megas Z de delphox Z, greninja Z y tal
 	// TODO Los "num" de algunos pokes nuevos y formas (furfrou)
